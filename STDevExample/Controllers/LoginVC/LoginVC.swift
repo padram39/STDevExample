@@ -30,7 +30,6 @@ class LoginVC: UIViewController {
         if pass?.count ?? 0 < 8 {
             let alert = UIAlertController(title: "Password Problem", message: "Enter at least 8 characters", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: { _ in
-                self.dismiss(animated: true, completion: nil)
             }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -46,7 +45,6 @@ class LoginVC: UIViewController {
         }else{
             let alert = UIAlertController(title: "Email not valid", message: "Enter a valid email", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: { _ in
-                self.dismiss(animated: true, completion: nil)
             }))
             self.present(alert, animated: true, completion: nil)
         }
