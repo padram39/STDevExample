@@ -72,6 +72,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func logoutBtnPressed(_ sender: Any) {
+        UserSettings.isLogin = false
         let vc = StoryboardHandler.shared.child(withIdentifier: "loginVc")
         vc?.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true, completion: nil)
